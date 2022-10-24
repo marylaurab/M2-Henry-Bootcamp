@@ -1,0 +1,29 @@
+// Mixins acá:
+.btn(@borderadius, @bgcolor, @fcolor) {
+    border-radius: @borderadius;
+    background-color: @bgcolor;
+    color: @fcolor;
+    padding: 5px;
+    font-size: 15px;
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: @footer-font-color;
+        color: @btn-bg-color;
+        cursor: pointer;
+    }
+    @media @phone {
+        margin:0px;
+        width: 100%;
+        height:40px;
+    }
+} /*Ademas de solo declarar las propiedades pasadas por parametros, tambien tuve que declarar el retso de la spropiedades ya que no me lo tomo correctamente en el archivo de homepages agregandoselo directamente a la clase btn.*/
+
+a:hover {
+    background-color: @footer-font-color;
+        color: @btn-bg-color;
+        cursor: pointer;
+}
